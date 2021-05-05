@@ -1,0 +1,12 @@
+﻿  main.cpp
+  protocol_ranking.cpp
+  tcp_client.cpp
+tcp_client.cpp(64): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\8.1\Include\um\WinSock2.h(1850): note: 'inet_addr' の宣言を確認してください
+  tcp_server.cpp
+tcp_server.cpp(56): warning C4101: 'client': ローカル変数は 1 度も使われていません。
+  コード生成しています。
+  All 95 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  TeamProject Server.vcxproj -> C:\Users\gsp012\Documents\Visual Studio 2015\Projects\二年生\TeamProject Server\Release\TeamProject Server.exe
+  TeamProject Server.vcxproj -> C:\Users\gsp012\Documents\Visual Studio 2015\Projects\二年生\TeamProject Server\Release\TeamProject Server.pdb (Full PDB)

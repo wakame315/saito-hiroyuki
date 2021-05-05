@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CBullet" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAIAAAgAhAAAAAAAAAAAAAEAAAAACAAAAIAA=</HashCode>
+      <FileName>bullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CInput" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQCAAAAAAAAAAABAAAAAAAAAAAAAAoAAAACAAAAAAA=</HashCode>
+      <FileName>input.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CInputKeyboard" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAgBABAAAAAAEgAABAAAAIAAACAAAAAAA=</HashCode>
+      <FileName>inputkeyboard.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CManager" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAEABAgAhAAEAAAAABAAAACAAAAACAEAAAAA=</HashCode>
+      <FileName>manager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPlayer" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAgABAAAAIAAAAAAgAEAAAAACAAAAAAA=</HashCode>
+      <FileName>player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRenderer" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAgAQACAAAwABAAAABAAAAAAAAAgAAAACAAAAAAA=</HashCode>
+      <FileName>renderer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CScene" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAQAIAAAgABACAAAAIUAAkAgAAAAAICABAAAAg=</HashCode>
+      <FileName>scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CScene2d" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAIKAAAgAhACAAACIQAAAAAkAAAAACABAABAA=</HashCode>
+      <FileName>scene2d.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CExplosion" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAgACAAJAAAgABAAAAAAAAAAAAAEAAAAACBAAAAIA=</HashCode>
+      <FileName>explosion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="__unnamed_struct_0003_1" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAACAAAABAAAAAAAgAAA=</HashCode>
+      <FileName>main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="VERTEX_2D" Collapsed="true">
+    <Position X="4.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>main.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>
