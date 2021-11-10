@@ -1,6 +1,6 @@
 //=============================================================================
 //
-// DirectX雛型処理 [inputkeyboard.cpp]
+// キーボードの入力定義 [inputkeyboard.h]
 // Author :齋藤大行
 //
 //=============================================================================
@@ -16,18 +16,21 @@
 #include "main.h"
 #include "input.h"
 
+//=============================================================================
+// クラス定義
+//=============================================================================
 class CInputKeyboard : public CInput
 {
 public:
-	CInputKeyboard();
-	~CInputKeyboard();
-	HRESULT Init(HINSTANCE hInstance, HWND hWnd);
-	void Uninit(void);
-	void Update(void);
+	CInputKeyboard();								//コンストラクタ
+	~CInputKeyboard();								//デストラクタ
+	HRESULT Init(HINSTANCE hInstance, HWND hWnd);	//初期化処理
+	void Uninit(void);								//終了処理
+	void Update(void);								//更新処理
 
-	bool Getkeyboardpress(int nkey);
-	bool GetkeyboardTrigger(int nkey);
-	bool GetkeyboardRelease(int nkey);
+	bool Getkeyboardpress(int nkey);				//プレス
+	bool GetkeyboardTrigger(int nkey);				//トリガー
+	bool GetkeyboardRelease(int nkey);				//リリース
 private:
 
 	BYTE m_akeysrate[NUM_KEY_MAX];//キーボードの入力情報ワーク

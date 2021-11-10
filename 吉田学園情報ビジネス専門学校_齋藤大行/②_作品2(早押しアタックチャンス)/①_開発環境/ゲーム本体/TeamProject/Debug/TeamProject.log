@@ -1,8 +1,10 @@
-﻿  tutorial.cpp
+﻿  tcp_client.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  コードを生成中...
+  コンパイル中...
+  tutorial.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
   title.cpp
-  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  tcp_client.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
   sound.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
@@ -15,6 +17,8 @@ c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学�
   scene.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
   result.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  renderer.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
   protocol_ranking.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
@@ -36,11 +40,24 @@ c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学�
 c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\polygon.cpp(195): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   manager.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  コードを生成中...
-  スキップ中... (関連する変更は検出されませんでした)
-  renderer.cpp
   main.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  inputkeyboard.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  input.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
   displaytime.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\displaytime.cpp(231): warning C4838: 'double' から 'LONG' への変換には縮小変換が必要です
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\displaytime.cpp(231): warning C4244: '初期化中': 'double' から 'LONG' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\displaytime.cpp(246): warning C4838: 'double' から 'LONG' への変換には縮小変換が必要です
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\displaytime.cpp(246): warning C4244: '初期化中': 'double' から 'LONG' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\displaytime.cpp(260): warning C4838: 'double' から 'LONG' への変換には縮小変換が必要です
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\displaytime.cpp(260): warning C4244: '初期化中': 'double' から 'LONG' への変換です。データが失われる可能性があります。
   bg.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\bg.cpp(115): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\teamproject\bg.cpp(128): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  コードを生成中...
   TeamProject.vcxproj -> C:\Users\gsp012\Desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\Debug\TeamProject.exe
   TeamProject.vcxproj -> C:\Users\gsp012\Desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\②_作品2(早押しアタックチャンス)\①_開発環境\ゲーム本体\Debug\TeamProject.pdb (Full PDB)

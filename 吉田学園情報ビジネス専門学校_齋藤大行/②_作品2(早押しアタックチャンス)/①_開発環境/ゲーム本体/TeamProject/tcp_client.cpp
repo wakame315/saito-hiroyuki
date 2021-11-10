@@ -44,6 +44,9 @@ CTcpClient * CTcpClient::Create(const char * pHostName, int nPortNum)
 	return pTcpclient;
 }
 
+//=============================================================================
+//I—¹”»’èˆ—ŠÖ”
+//=============================================================================
 void CTcpClient::Release(void)
 {
 	Close();

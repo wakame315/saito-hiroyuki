@@ -53,7 +53,6 @@ CSound * CManager::m_pSound;
 CManager::CManager()
 {
 	m_nGameEndState = 120;
-	m_nDisTimeinit = 0;
 }
 
 //=============================================================================
