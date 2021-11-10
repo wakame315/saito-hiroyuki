@@ -25,7 +25,7 @@ public:
 	typedef enum
 	{
 		BG_TYPE_NONE = 0,
-		BG_TYPE1,		//“G‚ÌŽí—Þ
+		BG_TYPE1,		
 		BG_TYPE2,
 		BG_TYPE3,
 		BG_TYPR_MAX,

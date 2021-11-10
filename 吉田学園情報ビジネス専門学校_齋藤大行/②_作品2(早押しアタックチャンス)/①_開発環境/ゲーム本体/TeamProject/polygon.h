@@ -46,7 +46,6 @@ private:
 	TEX_SIGNAL m_tSignal;
 	bool m_buse;
 	int m_nUseNum;
-	int m_nMultiplication;
 	int m_nOnePlay;
 };
 #endif 

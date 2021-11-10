@@ -1,7 +1,7 @@
 //=============================================================================
 //
 // メイン処理 [main.cpp]
-// Author : 
+// Author : 齋藤大行
 //
 //=============================================================================
 #include "main.h"
@@ -25,25 +25,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 //*****************************************************************************
 #ifdef _DEBUG
 int						g_nCountFPS;			// FPSカウンタ
-#endif					
-												//CRenderer             * g_pRenderer = NULL;
-												//CScene                * g_pScene[MAX_POLYGON] = {};
+#endif				
 
-												//=============================================================================
-												// メイン関数
-												//=============================================================================
+//=============================================================================
+// メイン関数
+//=============================================================================
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-
-{
-
-
-	//g_pRenderer = new CRenderer;
-
-	/*for (int nCntScene = 0; nCntScene < MAX_POLYGON; nCntScene++)
-	{
-	g_pScene[nCntScene] = new CScene2d;
-	}*/
-
+{	
 	CManager * pManager = NULL;
 
 	WNDCLASSEX wcex =
@@ -189,6 +177,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
 
+//=============================================================================
+//FPSカウンタ所得関数
+//=============================================================================
 #ifdef _DEBUG
 int GetFPS(void)
 {
