@@ -30,8 +30,8 @@ public:
 	void Uninit(void);			//終了処理
 	void Update(void);			//更新処理
 	void Draw(void);			//描画処理
-	void SetScore(int nScore);  //スコア設定
-	void AddScore(int nScore);
+	void AddScore(int nScore);  //スコア設定
+	
 
 private:
 	CNumber *m_apNumber[MAX_NUM];

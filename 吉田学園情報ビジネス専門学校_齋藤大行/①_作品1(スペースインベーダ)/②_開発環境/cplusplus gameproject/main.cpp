@@ -1,7 +1,7 @@
 //=============================================================================
 //
 // メイン処理 [main.cpp]
-// Author : 
+// Author : 齋藤大行
 //
 //=============================================================================
 #include "main.h"
@@ -33,14 +33,6 @@ int						g_nCountFPS;			// FPSカウンタ
 // メイン関数
 //=============================================================================
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow){
-	
-
-	//g_pRenderer = new CRenderer;
-
-	/*for (int nCntScene = 0; nCntScene < MAX_POLYGON; nCntScene++)
-	{
-		g_pScene[nCntScene] = new CScene2d;
-	}*/
 	
 	CManager * pManager = NULL;
 

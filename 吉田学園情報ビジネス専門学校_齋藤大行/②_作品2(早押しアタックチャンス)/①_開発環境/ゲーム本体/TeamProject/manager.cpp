@@ -25,10 +25,9 @@
 #include "tutorial.h"
 #include "sound.h"
 
-//*****************************************************************************
-// マクロ定義
-//*****************************************************************************
-
+//=============================================================================
+//マクロ定義
+//=============================================================================
 #define DEBUG_SCENE2D
 #undef  DEBUG_SCENE2D
 
@@ -67,9 +66,9 @@ CManager::~CManager()
 //=============================================================================
 HRESULT CManager::Init(HINSTANCE hInstance, HWND hWnd, bool bWindow)
 {
-
+	//レンダラーインスタンス生成
 	m_pRenderer = new CRenderer;
-	
+	//サウンドインスタンス生成
 	m_pSound = new CSound;
 
 	// 初期化処理
@@ -77,14 +76,20 @@ HRESULT CManager::Init(HINSTANCE hInstance, HWND hWnd, bool bWindow)
 	{
 		return -1;
 	}
-	
+
+	//入力インスタンス生成
 	m_pInputKeyboard = new CInputKeyboard;
+	//入力初期化処理
 	m_pInputKeyboard->Init(hInstance, hWnd);
 
+	//テクスチャ読み込み
 	TextureLoad();
+	//サウンド初期化処理
 	m_pSound->Init(hWnd);
+	//フォント生成
 	CRanking::FontCreate();
 	CDisplaytime::FontCreate();
+	//モード設定
 	SetMode(m_Mode);
 
 	m_pSound->Play(CSound::BGM_TITLE);
@@ -270,35 +275,39 @@ void CManager::SetMode(MODE mode)
 	CInputKeyboard *pKey;
 
 	pKey = CManager::GetInputKeyboard();
-
+	//モードごとに設定
 	m_Mode = mode;
 	switch (m_Mode)
 	{
-	case MODE_TITLE:
+	case MODE_TITLE://タイトル
+			//リザルトの終了処理
 		if (m_pResult != NULL)
-		{
+		{	
 			m_pResult->Uninit();
 			delete m_pResult;
 			m_pResult = NULL;
 			
 		}
-	
+		//タイトル生成
 		m_pTitle = CTitle::Create();
 		CDisplaytime::Create();
 		break;
 
-	case MODE_TUTORIAL:
+	case MODE_TUTORIAL://チュートリアル
+			//タイトルの終了処理
 		if (m_pTitle != NULL)
 		{
 			m_pTitle->Uninit();
 			delete m_pTitle;
 			m_pTitle = NULL;
 		}
+		//チュートリアル生成
 		m_pTutorial = CTutorial::Create();
 	
 		break;
 
-	case MODE_GAME:
+	case MODE_GAME://ゲーム
+			//チュートリアルの終了処理
 		if (m_pTutorial != NULL)
 		{
 			m_pTutorial->Uninit();
@@ -306,16 +315,19 @@ void CManager::SetMode(MODE mode)
 			m_pTutorial = NULL;
 		}
 
-		
+		//背景生成
 		CBg::Create();
+		//ポリゴ生成
 		CPolygon::Create(D3DXVECTOR3(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3, 0.0f), D3DXVECTOR3(POLYGON_SIZE_X + 100, POLYGON_SIZE_Y, 0.0f), CPolygon::TEX_SIGNAL_GO);
 		CPolygon::Create(D3DXVECTOR3(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3, 0.0f), D3DXVECTOR3(POLYGON_SIZE_X, POLYGON_SIZE_Y, 0.0f), CPolygon::TEX_SIGNAL_MISS);
 
 		break;
-	case MODE_RESULT:
-
+	case MODE_RESULT://リザルト
+			//すべて終了処理
 			CScene::ReleaseAll();
+			//リザルト生成
 			m_pResult = CResult::Create();
+			//ゲームの終了判定を戻す
 			m_bGameEnd = false;
 
 		break;

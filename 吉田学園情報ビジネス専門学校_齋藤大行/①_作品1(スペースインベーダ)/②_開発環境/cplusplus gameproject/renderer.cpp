@@ -1,8 +1,21 @@
-#include"renderer.h"
-#include"scene.h"
+//=============================================================================
+//
+// レンダラー処理 [renderer.cpp]
+// Author :齋藤大行
+//
+//=============================================================================
+
+//=============================================================================
+//インクルードファイル
+//=============================================================================
+#include "renderer.h"
+#include "scene.h"
 #include "manager.h"
 #include "number.h"
 
+//=============================================================================
+//コンストラクタ
+//=============================================================================
 CRenderer::CRenderer()
 { 
 	m_pD3D = 0;
@@ -11,6 +24,9 @@ CRenderer::CRenderer()
 	
 }
 
+//=============================================================================
+//デストラクタ
+//=============================================================================
 CRenderer::~CRenderer()
 {
 }
@@ -164,161 +180,6 @@ void CRenderer::Draw(void)
 	m_pD3DDevice->Present(NULL, NULL, NULL, NULL);
 }
 
-#ifndef Si
-
-//=============================================================================
-// ポリゴンの初期化処理
-//=============================================================================
-HRESULT CRenderer::InitPolygon(void)
-{
-
-	// ポリゴンの位置を設定
-	m_posPolygon = D3DXVECTOR3(640, 360, 0);
-	// テクスチャの生成
-	D3DXCreateTextureFromFile(m_pD3DDevice,				// デバイスへのポインタ
-		TEXTURE_NAME,					// ファイルの名前
-		&m_pTexture);									// 読み込むメモリー
-
-														// 頂点バッファの生成
-	if (FAILED(m_pD3DDevice->CreateVertexBuffer(sizeof(VERTEX_2D) * NUM_VERTEX,	// 頂点データ用に確保するバッファサイズ(バイト単位)
-		D3DUSAGE_WRITEONLY,			// 頂点バッファの使用法　
-		FVF_VERTEX_2D,				// 使用する頂点フォーマット
-		D3DPOOL_MANAGED,			// リソースのバッファを保持するメモリクラスを指定
-		&m_pVtxBuff,				// 頂点バッファへのポインタ
-		NULL)))						// NULLに設定
-	{
-		return E_FAIL;
-	}
-
-	// 頂点情報を設定
-	VERTEX_2D *pVtx;
-
-	// 頂点バッファをロックし、頂点情報へのポインタを取得
-	m_pVtxBuff->Lock(0, 0, (void**)&pVtx, 0);
-
-	m_rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-	
-	// 頂点情報を設定
-	pVtx[0].Pos = D3DXVECTOR3(m_posPolygon.x + (-POLYGON_SIZE_Y / 2), m_posPolygon.y + (-POLYGON_SIZE_Y / 2), 0.0f);
-	pVtx[1].Pos = D3DXVECTOR3(m_posPolygon.x + (POLYGON_SIZE_X / 2) , m_posPolygon.y + (-POLYGON_SIZE_Y / 2), 0.0f);
-	pVtx[2].Pos = D3DXVECTOR3(m_posPolygon.x + (-POLYGON_SIZE_X / 2), m_posPolygon.y + (POLYGON_SIZE_Y / 2), 0.0f);
-	pVtx[3].Pos = D3DXVECTOR3(m_posPolygon.x + (POLYGON_SIZE_X / 2) , m_posPolygon.y + (POLYGON_SIZE_Y / 2), 0.0f);
-
-	pVtx[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-	pVtx[1].tex = D3DXVECTOR2(1.0f, 0.0f);
-	pVtx[2].tex = D3DXVECTOR2(0.0f, 1.0f);
-	pVtx[3].tex = D3DXVECTOR2(1.0f, 1.0f);
-
-	//rhwnの設定（値は1.0で固定）
-	pVtx[0].rhw = 1.0f;
-	pVtx[1].rhw = 1.0f;
-	pVtx[2].rhw = 1.0f;
-	pVtx[3].rhw = 1.0f;
-
-	//頂点のカラー(0～255の範囲で設定)
-	pVtx[0].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-	pVtx[1].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-	pVtx[2].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-	pVtx[3].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-
-	m_pVtxBuff->Unlock();
-
-
-	return S_OK;
-}
-
-//=============================================================================
-// ポリゴンの終了処理
-//=============================================================================
-void CRenderer::UninitPolygon(void)
-{
-	//テクスチャの開放
-	if (m_pTexture != NULL)
-	{	
-		m_pTexture->Release();
-		m_pTexture = NULL;
-	}
-	//頂点バッファの開放
-	if (m_pVtxBuff != NULL)
-	{	
-		m_pVtxBuff->Release();
-		m_pVtxBuff = NULL;
-	}
-}
-
-//=============================================================================
-// ポリゴンの更新処理
-//=============================================================================
-void CRenderer::UpdatePolygon(void)
-{
-
-	m_rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-	static float fradian = 0.0f;
-	static float fradius = 0.0f;
-	m_rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-	fradius = sqrtf(((TEXTURE_WIDTH / 2)*(TEXTURE_WIDTH / 2)) + ((TEXTURE_HEIGHT / 2)*(TEXTURE_HEIGHT / 2)));
-	fradian = atan2f((TEXTURE_HEIGHT / 2), (TEXTURE_WIDTH / 2));
-
-
-	m_rot.z += D3DX_PI * 0.01f;
-	if (m_rot.z >= D3DX_PI)
-	{	
-		m_rot.z -= D3DX_PI * 2.0f;
-	}
-
-	//頂点情報を設定
-	VERTEX_2D *pVtx;
-
-
-	m_pVtxBuff->Lock(0, 0, (void**)&pVtx, 0);
-
-	// 頂点情報を設定
-	pVtx[0].Pos = D3DXVECTOR3(m_posPolygon.x - (cosf(fradian - m_rot.z) * fradius), m_posPolygon.y - (sinf(fradian - m_rot.z) * fradius), 0.0f);
-	pVtx[1].Pos = D3DXVECTOR3(m_posPolygon.x + (cosf(fradian + m_rot.z) * fradius), m_posPolygon.y - (sinf(fradian + m_rot.z) * fradius), 0.0f);
-	pVtx[2].Pos = D3DXVECTOR3(m_posPolygon.x - (cosf(fradian + m_rot.z) * fradius), m_posPolygon.y + (sinf(fradian + m_rot.z) * fradius), 0.0f);
-	pVtx[3].Pos = D3DXVECTOR3(m_posPolygon.x + (cosf(fradian - m_rot.z) * fradius), m_posPolygon.y + (sinf(fradian - m_rot.z) * fradius), 0.0f);
-
-	pVtx[0].tex = D3DXVECTOR2(0.0f, 0.0f);
-	pVtx[1].tex = D3DXVECTOR2(1.0f, 0.0f);
-	pVtx[2].tex = D3DXVECTOR2(0.0f, 1.0f);
-	pVtx[3].tex = D3DXVECTOR2(1.0f, 1.0f);
-
-	//rhwnの設定（値は1.0で固定）
-	pVtx[0].rhw = 1.0f;
-	pVtx[1].rhw = 1.0f;
-	pVtx[2].rhw = 1.0f;
-	pVtx[3].rhw = 1.0f;
-
-	//頂点のカラー(0～255の範囲で設定)
-	pVtx[0].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-	pVtx[1].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-	pVtx[2].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-	pVtx[3].clo = D3DCOLOR_RGBA(255, 255, 255, 255);
-
-	m_pVtxBuff->Unlock();
-
-
-}
-
-//=============================================================================
-// ポリゴンの描画処理
-//=============================================================================
-void CRenderer::DrawPolygon(void)
-{
-
-	//頂点バッファをデバイスのデータストリームにバインド
-	m_pD3DDevice->SetStreamSource(0, m_pVtxBuff, 0, sizeof(VERTEX_2D));
-	// 頂点フォーマットの設定
-	m_pD3DDevice->SetFVF(FVF_VERTEX_2D);
-
-	//テクスチャの設定
-	m_pD3DDevice->SetTexture(0, m_pTexture);
-
-	// ポリゴンの描画
-	m_pD3DDevice->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, NUM_POLYGON);
-}
-
-#endif // !SU
 
 #ifdef _DEBUG
 //=============================================================================

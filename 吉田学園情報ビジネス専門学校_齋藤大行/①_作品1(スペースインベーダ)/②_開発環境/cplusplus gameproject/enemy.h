@@ -55,24 +55,24 @@ typedef enum
 	void Uninit(void);			//終了処理
 	void Update(void);			//更新処理
 	void Draw(void);			//描画処理
-	void Hit(int nDamage , ENEMYTYPE type ,int nHitType);
-	void SetEnemyType(ENEMYTYPE Type);
-	void AttackType(ENEMYTYPE Type);
-	ENEMYTYPE GetEnemyType(void) {return m_enemyType;}
+	void Hit(int nDamage , ENEMYTYPE type ,int nHitType);//弾が当たった時の処理
+	void SetEnemyType(ENEMYTYPE Type);					 //敵のタイプの設定
+	void AttackType(ENEMYTYPE Type);					 //攻撃のパターン	 
+	ENEMYTYPE GetEnemyType(void) {return m_enemyType;}	 //出現した敵の数所得処理
 private:
-	static LPDIRECT3DTEXTURE9 m_pTexture[MAX_ENEMY];
-	static int m_nEnemyNum;
-	static int m_nEnemySpawnState;
-	static int m_nEnemydesu;
-	bool m_bEnemydeath;
-	int m_nlife;
-
-	int m_nCntState;
-	int m_nScoreUp;
-	int m_nTrue;
-	ENEMYTYPE n_nRandType;
-	ENEMYTYPE m_enemyType;
-	ENEMYSTATE m_enemyState;
+	static LPDIRECT3DTEXTURE9 m_pTexture[MAX_ENEMY];//テクスチャ
+	static int m_nEnemyNum;							//出現数
+	static int m_nEnemySpawnState;					//スポーンするまでの時間
+	static int m_nEnemydesu;						//倒した数
+	bool m_bEnemydeath;								//死んだかどうか
+	int m_nlife;									//ライフ
+													
+	int m_nCntState;								//状態移行のカウント
+	int m_nScoreUp;									//スコア上昇数
+	int m_nTrue;									//移動方向変更の判定
+	
+	ENEMYTYPE m_enemyType;							//タイプ
+	ENEMYSTATE m_enemyState;						//状態
 
 
 protected:
