@@ -192,7 +192,7 @@ void CEnemy::Update(void)
 	if (rand() % 100 < 3)
 	{
 		//UŒ‚ˆ—
-		//AttackType(m_enemyType);
+		AttackType(m_enemyType);
 		//Œø‰Ê‰¹Ä¶
 		pSound->Play(CSound::SE_BULLET_ENEMY);
 
@@ -210,11 +210,11 @@ void CEnemy::Update(void)
 	//Œü‚«‚Ì•ÏX
 	if (rand() % 100 < 1)
 	{
-		//move.x = 5.0 * -1;
+		move.x = 5.0 * -1;
 	}
 	if (rand() % 100 < 1)
 	{
-		//move.x = 5.0 * 1;
+		move.x = 5.0 * 1;
 	}
 
 	//‰E‰æ–Ê’[‚Å’µ‚Ë•Ô‚é

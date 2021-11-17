@@ -1,6 +1,13 @@
-﻿  tutorial.cpp
-  title.cpp
-  sound.cpp
-  コードを生成中...
+﻿  enemy.cpp
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(309): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(313): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(339): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(343): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(369): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(373): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(399): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(403): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(429): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(454): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
   cplusplus gameproject.vcxproj -> C:\Users\gsp012\Desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\Debug\cplusplus gameproject.exe
   cplusplus gameproject.vcxproj -> C:\Users\gsp012\Desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\Debug\cplusplus gameproject.pdb (Full PDB)

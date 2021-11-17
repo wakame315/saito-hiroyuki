@@ -1,3 +1,14 @@
+//=============================================================================
+//
+// プレイヤーの処理 [player.cpp]
+// Author :齋藤大行
+//
+//=============================================================================
+
+//=============================================================================
+//インクルードファイル
+//=============================================================================
+#include "renderer.h"
 #include "player.h"
 #include "scene2d.h"
 #include "renderer.h"
@@ -11,8 +22,16 @@
 #include "manager.h"
 #include "result.h"
 #include "sound.h"
+
+//=============================================================================
+//静的メンバー変数
+//=============================================================================
 LPDIRECT3DTEXTURE9 CPlayer::m_pTexture;
 
+
+//=============================================================================
+//コンストラクタ
+//=============================================================================
 CPlayer::CPlayer():CScene2d(2)
 {
 	m_playerVector = 0;
@@ -23,10 +42,16 @@ CPlayer::CPlayer():CScene2d(2)
 
 }
 
+//=============================================================================
+//デストラクタ
+//=============================================================================
 CPlayer::~CPlayer()
 {
 }
 
+//=============================================================================
+//テクスチャロード
+//=============================================================================
 HRESULT CPlayer::Load(void)
 {
 	// テクスチャの生成
@@ -37,6 +62,9 @@ HRESULT CPlayer::Load(void)
 	return S_OK;
 }
 
+//=============================================================================
+//テクスチャアンロード
+//=============================================================================
 void CPlayer::Unload(void)
 {
 	//テクスチャの開放
@@ -47,6 +75,9 @@ void CPlayer::Unload(void)
 	}
 }
 
+//=============================================================================
+//初期化処理関数
+//=============================================================================
 HRESULT CPlayer::Init(void)
 {
 	CScene2d::Init();
@@ -57,29 +88,35 @@ HRESULT CPlayer::Init(void)
 	return S_OK;
 }
 
+//=============================================================================
+//終了処理関数
+//=============================================================================
 void CPlayer::Uninit(void)
 {
 	CScene2d::Uninit();
 }
 
+//=============================================================================
+//更新処理関数
+//=============================================================================
 void CPlayer::Update(void)
 {
-	CInputKeyboard *pKey;
+	CInputKeyboard *pKey;				//キーボードポインタ
 	pKey = CManager::GetInputKeyboard();
-	D3DXVECTOR3 pos;
-	D3DXVECTOR3 rot;
-	D3DXVECTOR3 move;
-	CSound *pSound = CManager::GetSound();
-	SetTexture();
-	pos = GetPosition();
-	rot = GetRot();
+	D3DXVECTOR3 rot;								//向き
+	D3DXVECTOR3 move;								//移動量
+	D3DXVECTOR3 pos;								//位置
+	CSound *pSound = CManager::GetSound();//サウンドポインタ
+	SetTexture();//テクスチャ設定
+	pos = GetPosition();		//位置所得
+	rot = GetRot();				//移動量所得
 
-	static float fradian = 0.0f;
-	static float fradius = 0.0f;
-	fradius = sqrtf((float)(((TEXTURE_WIDTH / 2)*(TEXTURE_WIDTH / 2)) + ((TEXTURE_HEIGHT / 2)*(TEXTURE_HEIGHT / 2))));
-	fradian = atan2f((TEXTURE_HEIGHT / 2), (TEXTURE_WIDTH / 2));
+	//static float fradian = 0.0f;
+	//static float fradius = 0.0f;
+	//fradius = sqrtf((float)(((TEXTURE_WIDTH / 2)*(TEXTURE_WIDTH / 2)) + ((TEXTURE_HEIGHT / 2)*(TEXTURE_HEIGHT / 2))));
+	//fradian = atan2f((TEXTURE_HEIGHT / 2), (TEXTURE_WIDTH / 2));
 
-		
+	
 
 
 	for (int nCntScene = 0; nCntScene < MAX_SCENE*PRIORITY_MAX; nCntScene++)
@@ -289,11 +326,17 @@ void CPlayer::Update(void)
 	}
 }
 
+//=============================================================================
+//描画処理
+//=============================================================================
 void CPlayer::Draw(void)
 {
 	CScene2d::Draw();
 }
 
+//=============================================================================
+//生成処理関数
+//=============================================================================
 CPlayer * CPlayer::Create(D3DXVECTOR3 pos)
 {
 	CPlayer * pPlayer;
@@ -306,19 +349,22 @@ CPlayer * CPlayer::Create(D3DXVECTOR3 pos)
 
 	return pPlayer;
 }
+//=============================================================================
+//攻撃ヒット処理関数
+//=============================================================================
 void CPlayer::Hit(int nDamage, int nHitType)
 {
 
 	switch (nHitType)
 	{
-	case 1:
+	case 1://ダメージ状態
 		m_nLife -= nDamage;
 		m_playerstate = PLAYERSTATE_DAMAGE;
 		m_nCntState = 8;
 
 		break;
 
-	case 2:
+	case 2://回復
 		m_nLife += nDamage;
 		m_playerstate = PLAYERSTATE_CUA;
 		m_nCntState = 8;
