@@ -1,13 +1,39 @@
-﻿  enemy.cpp
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(309): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(313): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(339): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(343): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(369): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(373): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(399): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(403): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(429): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-c:\users\gsp012\desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(454): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
-  cplusplus gameproject.vcxproj -> C:\Users\gsp012\Desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\Debug\cplusplus gameproject.exe
-  cplusplus gameproject.vcxproj -> C:\Users\gsp012\Desktop\saito-hiroyuki\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\Debug\cplusplus gameproject.pdb (Full PDB)
+﻿  tutorial.cpp
+  title.cpp
+  sound.cpp
+  score.cpp
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\score.cpp(47): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+  scene2d.cpp
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\scene2d.cpp(242): warning C4244: '引数': 'FLOAT' から 'DWORD' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\scene2d.cpp(243): warning C4244: '引数': 'FLOAT' から 'DWORD' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\scene2d.cpp(244): warning C4244: '引数': 'FLOAT' から 'DWORD' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\scene2d.cpp(245): warning C4244: '引数': 'FLOAT' から 'DWORD' への変換です。データが失われる可能性があります。
+  scene.cpp
+  result.cpp
+  renderer.cpp
+  player.cpp
+  number.cpp
+  manager.cpp
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\manager.cpp(265): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+  main.cpp
+  inputkeyboard.cpp
+  input.cpp
+  explosion.cpp
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\explosion.cpp(114): warning C4101: 'type': ローカル変数は 1 度も使われていません。
+  enemy.cpp
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(309): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(313): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(339): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(343): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(369): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(373): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(399): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(403): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(429): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\cplusplus gameproject\enemy.cpp(454): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+  bullet.cpp
+  bg.cpp
+  コードを生成中...
+  LINK : 前回のインクリメンタル リンクで D:\吉田学園情報ビジネス専門学校_齋藤大行\①_作品1(スペースインベーダ)\②_開発環境\Debug\cplusplus gameproject.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(638,5): warning MSB4220: 現在実行中のタスク "Link" のキャンセルを待機しています。
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(638,5): error MSB6006: "link.exe" はコード 1 を伴って終了しました。
